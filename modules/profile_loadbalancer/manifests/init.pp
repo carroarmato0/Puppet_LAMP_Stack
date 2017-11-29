@@ -5,20 +5,6 @@ class profile_loadbalancer (
 	$site_name	= "demo",
 
 ){
-#
-#	class	{ 'nginx': }
-#
-#	nginx::resource::upstream { 'demo':
-#		members	=> [
-#			'app01',
-#			'app02',
-#		],
-#	}
-#
-#	nginx::resource::server {
-#		
-#
-#
 	package { 'nginx':
 		ensure	=> present,
 		before	=> File["/etc/nginx/sites-available/${site_name}"],

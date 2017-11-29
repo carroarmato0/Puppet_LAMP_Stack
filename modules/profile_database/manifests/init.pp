@@ -13,8 +13,6 @@ class profile_database (
 		restart	=> true,
 	}
 
-#	include ::mysql::bindings::python
-
 	mysql::db { '${site_name}':
 		user	 => '${site_name}',
 		password => '${site_name}',
