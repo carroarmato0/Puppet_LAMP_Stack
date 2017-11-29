@@ -1,0 +1,15 @@
+#This file is managed by Puppet.
+# DO NOT EDIT
+upstream <%= @site_name %> {
+	<% @server.each do |this_server| -%>
+	server <%= this_server %>;
+	<% end -%>
+}
+
+server {
+	listen <%= @port %>;
+
+	location / {
+		proxy_pass http://<%= @site_name %>;
+	}
+}
