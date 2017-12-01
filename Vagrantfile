@@ -11,7 +11,7 @@
 # This should put you at the control host
 #  with access, by name, to other vms
 Vagrant.configure(2) do |config|
-  config.hostmanager.enabled = true
+  #config.hostmanager.enabled = true
 
   config.vm.box = "ubuntu/xenial64"
 
